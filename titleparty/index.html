@@ -72,30 +72,10 @@
         titleTemplet="";
         userName="";
         shareTitle="";
-        function setTitleTemplet(char){
-            titleTemplet=char;
-            show_step(2);
-        }
-        function setUserName(name){
-            userName=name;
-        }
-        function ok(){
-            setUserName(document.querySelector("#name").value);
-            shareTitle=titleTemplet.replace("XXX",userName);
-            document.querySelector("#title").innerHTML=shareTitle;
-            shareLink="http://www.dobemedia.com/titleparty/index.html?title="+shareTitle;
-            show_step(3);
-        }
-        function show_step(n){
-            document.querySelector("#step_1").style.display="none";
-            document.querySelector("#step_2").style.display="none";
-            document.querySelector("#step_3").style.display="none";
-            document.querySelector("#step_4").style.display="none";
-            document.querySelector("#step_"+n).style.display="block";
+        function mk(){
+            window.location.href="http://www.dobemedia.com/titleparty/make-a-title.html";
         }
         function init() {
-
-
             document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
                 var icon = "res/icon.png";
                 var url = document.location.href;
@@ -135,33 +115,14 @@
                     });
                 });
             });
-            show_step(1);
         }
         window.addEventListener("load",init,false);
     </script>
 </head>
 <body>
 <div id="step_1">
-    <h1>1）选择模板</h1>
-    <button ontouchstart="setTitleTemplet(this.innerHTML)">纽约邮报专访 XXX：有梦想要藏在心底。</button>
-    <button ontouchstart="setTitleTemplet(this.innerHTML)">纽约邮报专访 XXX：男生排队给我打饭。</button>
-    <button ontouchstart="setTitleTemplet(this.innerHTML)">纽约邮报专访 XXX：追我的女孩一箩筐。</button>
-</div>
-<div id="step_2">
-    <h1>2）输入名字</h1>
-    <input type="text" id="name" placeholder="请输入您的名字">
-    <button ontouchstart="ok();">好了，预览效果。</button>
-    <button ontouchstart="show_step(1);">返回第1步换个标题</button>
-</div>
-<div id="step_3">
-    <h1>预览效果</h1>
-    <div id="title"></div>
-    <button ontouchstart="show_step(4);">发送到朋友圈</button>
-    <button ontouchstart="show_step(2);">重新输入姓名</button>
-    <button ontouchstart="show_step(1);">重新更换模板</button>
-</div>
-<div id="step_4">
-    <h1>右上角分享到朋友圈</h1>
+    <h1>此标题只供娱乐</h1>
+    <button ontouchstart="mk();">我也要制作一个标题新闻</button>
 </div>
 
 <div id="footer">1999-2014 dobeMedia</div>
