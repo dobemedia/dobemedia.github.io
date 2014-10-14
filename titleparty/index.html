@@ -100,6 +100,19 @@
                     });
                 });
             });
+
+
+            randomAd();
+        }
+        function randomAd(){
+            var ads=new Array();
+            ads.push(["新人送Q币","ads/1.png","http://re.paipai.com/tws/etgcl/click?fu=http%3A%2F%2Fte.paipai.com%2Fcps_fresher.shtml&pps=etg.12843628_105026_22_12843631"]);
+            ads.push(["让生活多一份激情","ads/2.png","http://re.paipai.com/tws/etgcl/click?fu=http%3A%2F%2Fshop.paipai.com%2F2310917501&pps=etg.12843628_105026_2_12843632-9893163"]);
+            ads.push(["面包机","ads/3.png","http://re.paipai.com/tws/etgcl/click?fu=http%3A%2F%2Fshop.paipai.com%2F2329063229&pps=etg.12843628_105026_370_12843632"]);
+
+            var tmp_index=Math.floor(Math.random(1)*ads.length);
+            document.querySelector("#adImg").src=ads[tmp_index][1];
+            document.querySelector("#ad").href=ads[tmp_index][2];
         }
         window.addEventListener("load",init,false);
     </script>
@@ -109,7 +122,7 @@
     <h1>你上当了(￣▽￣)"</h1>
     <button ontouchstart="mk();">制作采访我的新闻标题</button>
     <a id="ad" href="http://re.paipai.com/tws/etgcl/click?fu=http%3A%2F%2Fte.paipai.com%2Fcps_fresher.shtml&pps=etg.12843628_105026_22_12843631" target="_blank">
-        <img src="ads/1.png" width="100%" border="0">
+        <img id="adImg" src="ads/1.png" width="100%" border="0">
     </a>
 </div>
 
