@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh">
+    <meta charset="UTF-8">
+    <title>制造一个好玩的标题</title>
+    <meta name="domain_verify" content="pmrgi33nmfuw4ir2ejsg6ytfmjxxqltdn5wselbcm52wszbchirdkytcmvsdeobzhbstkyjugvtdgyrzmvsgenbumi3wmmdgmfrtsyzcfqrhi2lnmvjwc5tfei5dcnbrgeztknzrge4tknbspu">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            text-align: center;
+        }
+        #footer{
+            position: fixed;
+            width: 100%;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            height: 50px;
+            line-height: 50px;
+            color: #fff;
+            background: #ccc;
+        }
+        button{
+            width: 90%;
+            height: 20%;
+            margin: 10px 0px 0px 0px;
+        }
+        input{
+            width: 90%;
+            height: 50px;
+            line-height: 50px;
+            margin: 10px 0px 0px 0px;
+        }
+        #step_1{
+            position: fixed;
+            width: 100%;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 50px;
+            background: #fb5e00;
+        }
+        h1{
+            color: #fff;
+            height: 25%;
+        }
+    </style>
+    <script>
+        titleTemplet="";
+        userName="";
+        shareTitle="";
+        function ok(){
+            shareTitle=document.querySelector("#title").value
+            shareLink="http://www.dobemedia.com/titleparty/index.html";
+        }
+        function init() {
+
+
+            document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+                var icon = "res/icon.png";
+                var url = document.location.href;
+                var urlArr = url.split("/");
+                var imgUrl = "";
+                for (i = 0; i < urlArr.length - 1; i++) {
+                    imgUrl += urlArr[i] + "/";
+                }
+                imgUrl += icon;
+                shareLink = document.location.href;
+                shareTitle = document.title;
+                shareIcon = "http://www.dobemedia.com/titleparty/res/icon.png";
+                // 发送给好友
+                WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+                    WeixinJSBridge.invoke('sendAppMessage', {
+                        "img_url": shareIcon,
+                        "img_width": "100",
+                        "img_height": "100",
+                        "link": shareLink,
+                        "desc": "",
+                        "title": shareTitle
+                    }, function (res) {
+                        _report('send_msg', res.err_msg);
+                    })
+                });
+                // 分享到朋友圈
+                WeixinJSBridge.on('menu:share:timeline', function (argv) {
+                    WeixinJSBridge.invoke('shareTimeline', {
+                        "img_url": shareIcon,
+                        "img_width": "100",
+                        "img_height": "100",
+                        "link": shareLink,
+                        "desc": "",
+                        "title": shareTitle
+                    }, function (res) {
+                        _report('timeline', res.err_msg);
+                    });
+                });
+            });
+        }
+        window.addEventListener("load",init,false);
+    </script>
+</head>
+<body>
+<div id="step_1">
+    <input type="text" id="title" placeholder="">
+    <button ontouchstart="ok();">好了，预览效果。</button>
+</div>
+
+<div id="footer">1999-2014 dobeMedia</div>
+<div style="display: none;"><img src="http://img.users.51.la/17389585.asp" /></div>
+</body>
+</html>
