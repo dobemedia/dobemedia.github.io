@@ -65,14 +65,7 @@
         }
         function init() {
             document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
-                var icon = "res/icon.png";
-                var url = document.location.href;
-                var urlArr = url.split("/");
-                var imgUrl = "";
-                for (i = 0; i < urlArr.length - 1; i++) {
-                    imgUrl += urlArr[i] + "/";
-                }
-                imgUrl += icon;
+                
                 shareLink = document.location.href;
                 shareTitle = document.title;
                 shareIcon = "http://www.dobemedia.com/titleparty/res/icon.png";
