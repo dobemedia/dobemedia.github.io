@@ -10,28 +10,31 @@
     <meta content="telephone=no" name="format-detection">
     <meta content="email=no" name="format-detection">
     <link href="../css/page.css" rel="stylesheet" type="text/css">
-    <script>
-        var tmp_time=0;
-        function load(){
-            var today=new Date();
-            var h=today.getHours();
-            var m=today.getMinutes();
-            var s=today.getSeconds();
-            if(h<10){
-                h="0"+h;
-            }
-            if(m<10){
-                m="0"+m;
-            }
-            if(s<10){
-                s="0"+s;
-            }
-            var file=h+""+m;
-            document.title="当前时间："+h+":"+m;
-            document.querySelector("#clock").src="http://www.bigerthanbiger.com/mmclock/"+file+".jpg";
+    <style>
+        #clock_1,#clock_2{
+            display: none;
         }
-        function time(){
-            tmp_time++;
+    </style>
+    <script>
+        tmp_time=0;
+        img_index=1;
+        img_url="";
+        function load(){
+            if(img_index==1){
+                document.querySelector("#clock_2").src=img_url;
+                img_index=2;
+            }else{
+                document.querySelector("#clock_1").src=img_url;
+                img_index=1;
+            }
+        }
+        function show(){
+            document.querySelector("#clock_1").style.display="none";
+            document.querySelector("#clock_1").style.display="none";
+
+            document.querySelector("#clock_"+img_index).style.display="block";
+        }
+        function getTime(){
             var today=new Date();
             var h=today.getHours();
             var m=today.getMinutes();
@@ -46,13 +49,25 @@
                 s="0"+s;
             }
             document.querySelector("#post-date").innerHTML=h+":"+m+":"+s;
-            if(tmp_time==60){
+            file=h+""+m;
+            img_url="http://www.bigerthanbiger.com/mmclock/"+file+".jpg";
+        }
+        function time(){
+            getTime();
+            tmp_time++;
+
+            if(tmp_time==30) {
                 load();
+            }
+            if(tmp_time==60){
+                show();
                 tmp_time=1;
             }
         }
         function init(){
+            getTime();
             load();
+            show();
             window.setInterval(time,1000);
         }
         window.addEventListener("load",init,false);
@@ -62,7 +77,8 @@
     <h1 id="title">美女时钟</h1>
     <p style="text-align: center"><span id="post-author">逗比传媒</span> <span id="post-date">2014-10-01</span></p>
     <div id="text">
-        <img id="clock" src="">
+        <img id="clock_1">
+        <img id="clock_2">
     </div>
     <div style="display: none;"><img src="http://img.users.51.la/17389585.asp" /></div>
     <div id="footer">1999-2014 dobeMedia 逗比传媒</div>
