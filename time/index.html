@@ -16,29 +16,15 @@
         }
     </style>
     <script>
-        tmp_time=0;
-        img_index=1;
-        img_url="";
-        function load(){
-            if(img_index==1){
-                document.querySelector("#clock_2").src=img_url;
-                img_index=2;
-            }else{
-                document.querySelector("#clock_1").src=img_url;
-                img_index=1;
-            }
-        }
-        function show(){
-            document.querySelector("#clock_1").style.display="none";
-            document.querySelector("#clock_1").style.display="none";
 
-            document.querySelector("#clock_"+img_index).style.display="block";
-        }
-        function getTime(){
+        img_index=1;
+
+        function time(){
             var today=new Date();
             var h=today.getHours();
             var m=today.getMinutes();
             var s=today.getSeconds();
+
             if(h<10){
                 h="0"+h;
             }
@@ -48,26 +34,90 @@
             if(s<10){
                 s="0"+s;
             }
-            document.querySelector("#post-date").innerHTML=h+":"+m+":"+s;
-            file=h+""+m;
-            img_url="http://www.bigerthanbiger.com/mmclock/"+file+".jpg";
-        }
-        function time(){
-            getTime();
-            tmp_time++;
+            var strTime=h+":"+m+":"+s;
+            document.querySelector("#post-date").innerHTML=strTime;
+            //if s==0
+            if(parseInt(s)==0){
+                //show img
+                document.querySelector("#clock_1").style.display="none";
+                document.querySelector("#clock_2").style.display="none";
+                document.querySelector("#clock_"+img_index).style.display="block";
+                if(img_index==2){
+                    img_index=1;
+                }else{
+                    img_index=2;
+                }
+                //load next img
+                var nextH=h;
+                var nextM=m;
 
-            if(tmp_time==30) {
-                load();
+                if(m==59){
+                    nextM=0;
+                    nextH=h+1;
+                }else{
+                    nextM=m+1;
+                }
+                if(nextM<10){
+                    m="0"+m;
+                }
+                if(nextH<10){
+                    nextH="0"+h;
+                }
+                var strNextTime=nextH+""+nextM;
+
+                var imgUrl="http://www.bigerthanbiger.com/mmclock/"+strNextTime+".jpg";
+                document.querySelector("#clock_"+img_index).src=imgUrl;
             }
-            if(tmp_time==60){
-                show();
-                tmp_time=1;
-            }
+
+
         }
         function init(){
-            getTime();
-            load();
-            show();
+            //get time
+            var today=new Date();
+            var h=today.getHours();
+            var m=today.getMinutes();
+            var s=today.getSeconds();
+
+            if(h<10){
+                h="0"+h;
+            }
+            if(m<10){
+                m="0"+m;
+            }
+            if(s<10){
+                s="0"+s;
+            }
+            var imgUrl="http://www.bigerthanbiger.com/mmclock/"+h+""+m+""+".jpg";
+            //load img
+            document.querySelector("#clock_1").src=imgUrl;
+
+            //show img
+            document.querySelector("#clock_1").style.display="none";
+            document.querySelector("#clock_1").style.display="none";
+            document.querySelector("#clock_1").style.display="block";
+            img_index=2;
+            //get next time
+            var nextH=h;
+            var nextM=m;
+
+            if(m==59){
+                nextM=0;
+                nextH=h+1;
+            }else{
+                nextM=m+1;
+            }
+            if(nextM<10){
+                m="0"+m;
+            }
+            if(nextH<10){
+                nextH="0"+h;
+            }
+            var strNextTime=nextH+""+nextM;
+
+
+            //load next image
+            var imgUrl="http://www.bigerthanbiger.com/mmclock/"+strNextTime+".jpg";
+            document.querySelector("#clock_"+img_index).src=imgUrl;
             window.setInterval(time,1000);
         }
         window.addEventListener("load",init,false);
@@ -75,7 +125,7 @@
 </head>
 <body>
     <h1 id="title">美女时钟</h1>
-    <p style="text-align: center"><span id="post-author">逗比传媒</span> <span id="post-date">2014-10-01</span></p>
+    <p style="text-align: center"><span id="post-author">逗比传媒</span> <span id="post-date"></span></p>
     <div id="text">
         <img id="clock_1">
         <img id="clock_2">
