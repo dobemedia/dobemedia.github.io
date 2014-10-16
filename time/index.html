@@ -63,15 +63,15 @@
 
                 if(m==59){
                     nextM=0;
-                    nextH=h+1;
+                    nextH=parseInt(h)+1;
                 }else{
-                    nextM=m+1;
+                    nextM=parseInt(m)+1;
                 }
                 if(nextM<10){
                     nextM="0"+nextM;
                 }
                 if(nextH<10){
-                    nextH="0"+h;
+                    nextH="0"+parseInt(h);
                 }
                 var strNextTime=nextH+""+nextM;
 
@@ -114,15 +114,15 @@
 
             if(m==59){
                 nextM=0;
-                nextH=h+1;
+                nextH=parseInt(h)+1;
             }else{
-                nextM=m+1;
+                nextM=parseInt(m)+1;
             }
             if(nextM<10){
                 nextM="0"+nextM;
             }
             if(nextH<10){
-                nextH="0"+h;
+                nextH="0"+parseInt(h);
             }
             var strNextTime=nextH+""+nextM;
 
