@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh">
+    <meta charset="UTF-8">
+    <title>美女时钟</title>
+    <meta name="domain_verify" content="pmrgi33nmfuw4ir2ejsg6ytfmjxxqltdn5wselbcm52wszbchirdkytcmvsdeobzhbstkyjugvtdgyrzmvsgenbumi3wmmdgmfrtsyzcfqrhi2lnmvjwc5tfei5dcnbrgeztknzrge4tknbspu">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <link href="../css/page.css" rel="stylesheet" type="text/css">
+    <script>
+        var tmp_time=0;
+        function load(){
+            var today=new Date();
+            var h=today.getHours();
+            var m=today.getMinutes();
+            var s=today.getSeconds();
+            if(h<10){
+                h="0"+h;
+            }
+            if(m<10){
+                m="0"+m;
+            }
+            if(s<10){
+                s="0"+s;
+            }
+            var file=h+""+m;
+            document.title="当前时间："+h+":"+m;
+            document.querySelector("#clock").src="http://www.bigerthanbiger.com/mmclock/"+file+".jpg";
+        }
+        function time(){
+            tmp_time++;
+            if(tmp_time==60000){
+                load();
+                tmp_time=1;
+            }
+        }
+        function init(){
+            load();
+            window.setInterval(time,1000);
+        }
+        window.addEventListener("load",init,false);
+    </script>
+</head>
+<body>
+    <h1 id="title">美女时钟</h1>
+    <p style="text-align: center"><span id="post-author">两个裁缝</span> <span id="post-date">2014-10-16</span></p>
+    <div id="text">
+        <img id="clock" src="">
+    </div>
+    <div style="display: none;"><img src="http://img.users.51.la/17389585.asp" /></div>
+    <div id="footer">1999-2014 dobeMedia 逗比传媒</div>
+    <div id="bar">
+        <div class="menu" ontouchstart="window.location.href='http://www.dobemedia.com/index.html';">回首页</div>
+        <div class="menu" ontouchstart="window.location.href='http://www.dobemedia.com/titleparty/make-a-title.html';">标题党</div>
+        <div class="menu" ontouchstart="window.location.href='http://www.dobebox.com';">玩游戏</div>
+    </div>
+</body>
+</html>

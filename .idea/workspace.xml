@@ -43,6 +43,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/time/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5911111" vertical-offset="494" max-vertical-offset="1254">
+              <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="yonghu_yonghu.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://C:/AppServ/www/huati/yonghu_yonghu.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -53,10 +63,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="page.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/page.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8012552" vertical-offset="2828" max-vertical-offset="3344">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2828" max-vertical-offset="3344">
               <caret line="169" column="42" selection-start-line="169" selection-start-column="42" selection-end-line="169" selection-end-column="42" />
               <folding />
             </state>
@@ -83,12 +93,13 @@
         <option value="$PROJECT_DIR$/articles/4.html" />
         <option value="C:/AppServ/www/huati/yonghu_yonghu.html" />
         <option value="$PROJECT_DIR$/css/page.css" />
+        <option value="$PROJECT_DIR$/time/index.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="121" />
-    <option name="y" value="280" />
+    <option name="x" value="23" />
+    <option name="y" value="253" />
     <option name="width" value="1400" />
     <option name="height" value="629" />
   </component>
@@ -162,6 +173,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\g\Documents\dobeMedia\time" />
       <recent name="C:\Users\g\Documents\dobeMedia\articles" />
       <recent name="C:\Users\g\Documents\dobeMedia\articles\" />
     </key>
@@ -239,7 +251,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="121" y="280" width="1400" height="629" extended-state="1" />
+    <frame x="23" y="253" width="1400" height="629" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -338,14 +350,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/articles/3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.285715" vertical-offset="0" max-vertical-offset="760">
-          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/AppServ/www/huati/yonghu_yonghu.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.392858" vertical-offset="620" max-vertical-offset="1881">
@@ -364,8 +368,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/page.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8012552" vertical-offset="2828" max-vertical-offset="3344">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2828" max-vertical-offset="3344">
           <caret line="169" column="42" selection-start-line="169" selection-start-column="42" selection-end-line="169" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/articles/3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.285715" vertical-offset="0" max-vertical-offset="760">
+          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/time/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5911111" vertical-offset="494" max-vertical-offset="1254">
+          <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
           <folding />
         </state>
       </provider>
