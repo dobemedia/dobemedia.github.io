@@ -38,8 +38,8 @@
       <file leaf-file-name="3.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/articles/3.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33777776" vertical-offset="171" max-vertical-offset="760">
-              <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.6333333" vertical-offset="171" max-vertical-offset="760">
+              <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -296,8 +296,7 @@
         <state vertical-scroll-proportion="-6.107143" vertical-offset="38" max-vertical-offset="1349">
           <caret line="11" column="65" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="65" />
           <folding>
-            <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -314,8 +313,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/articles/3.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33777776" vertical-offset="171" max-vertical-offset="760">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.6333333" vertical-offset="171" max-vertical-offset="760">
+          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
           <folding />
         </state>
       </provider>
