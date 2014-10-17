@@ -16,7 +16,9 @@
         }
     </style>
     <script>
-
+        shareLink = document.location.href;
+        shareTitle = document.title;
+        shareIcon ="";
         img_index=1;
         function randomAd(){
             var ads=new Array();
@@ -77,6 +79,7 @@
 
                 var imgUrl="http://www.bigerthanbiger.com/mmclock/"+strNextTime+".jpg";
                 document.querySelector("#clock_"+img_index).src=imgUrl;
+                shareIcon=imgUrl;
                 randomAd();
             }
 
@@ -132,7 +135,54 @@
             document.querySelector("#clock_"+img_index).src=imgUrl;
             window.setInterval(time,1000);
         }
-        window.addEventListener("load",init,false);
+        window.addEventListener("load",false);
+        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+
+            shareLink = document.location.href;
+            shareTitle = document.title;
+            var today=new Date();
+            var h=today.getHours();
+            var m=today.getMinutes();
+            var s=today.getSeconds();
+
+            if(h<10){
+                h="0"+h;
+            }
+            if(m<10){
+                m="0"+m;
+            }
+            if(s<10){
+                s="0"+s;
+            }
+            var imgUrl="http://www.bigerthanbiger.com/mmclock/"+h+""+m+""+".jpg";
+            shareIcon = imgUrl;
+            // 发送给好友
+            WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+                WeixinJSBridge.invoke('sendAppMessage', {
+                    "img_url": shareIcon,
+                    "img_width": "100",
+                    "img_height": "100",
+                    "link": shareLink,
+                    "desc": "",
+                    "title": shareTitle
+                }, function (res) {
+                    _report('send_msg', res.err_msg);
+                })
+            });
+            // 分享到朋友圈
+            WeixinJSBridge.on('menu:share:timeline', function (argv) {
+                WeixinJSBridge.invoke('shareTimeline', {
+                    "img_url": shareIcon,
+                    "img_width": "100",
+                    "img_height": "100",
+                    "link": shareLink,
+                    "desc": "",
+                    "title": shareTitle
+                }, function (res) {
+                    _report('timeline', res.err_msg);
+                });
+            });
+        });
     </script>
 </head>
 <body>
