@@ -135,7 +135,7 @@
             document.querySelector("#clock_"+img_index).src=imgUrl;
             window.setInterval(time,1000);
         }
-        window.addEventListener("load",false);
+        window.addEventListener("load",init,false);
         document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
 
             shareLink = document.location.href;
@@ -183,6 +183,7 @@
                 });
             });
         });
+
     </script>
 </head>
 <body>
