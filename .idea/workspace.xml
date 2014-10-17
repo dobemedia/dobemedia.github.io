@@ -56,21 +56,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="6.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="6.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/articles/6.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5185185" vertical-offset="1197" max-vertical-offset="1767">
-              <caret line="77" column="6" selection-start-line="77" selection-start-column="6" selection-end-line="77" selection-end-column="6" />
+            <state vertical-scroll-proportion="-0.6785714" vertical-offset="1197" max-vertical-offset="1767">
+              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/time/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.964285" vertical-offset="3021" max-vertical-offset="4028">
-              <caret line="184" column="11" selection-start-line="184" selection-start-column="11" selection-end-line="184" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.2962963" vertical-offset="798" max-vertical-offset="4047">
+              <caret line="50" column="38" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -107,14 +107,14 @@
         <option value="$PROJECT_DIR$/css/page.css" />
         <option value="C:/AppServ/www/huati/yonghu_yonghu.html" />
         <option value="$PROJECT_DIR$/articles/5.html" />
-        <option value="$PROJECT_DIR$/time/index.html" />
         <option value="$PROJECT_DIR$/articles/6.html" />
+        <option value="$PROJECT_DIR$/time/index.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="335" />
-    <option name="y" value="442" />
+    <option name="x" value="258" />
+    <option name="y" value="224" />
     <option name="width" value="1280" />
     <option name="height" value="692" />
   </component>
@@ -309,7 +309,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="335" y="442" width="1280" height="692" extended-state="0" />
+    <frame x="258" y="224" width="1280" height="692" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -603,17 +603,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/articles/5.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.464286" vertical-offset="171" max-vertical-offset="1710">
-          <caret line="20" column="22" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="22" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.0357144" vertical-offset="1672" max-vertical-offset="2489">
@@ -638,18 +627,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/time/index.html">
+    <entry file="file://$PROJECT_DIR$/articles/6.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.964285" vertical-offset="3021" max-vertical-offset="4028">
-          <caret line="184" column="11" selection-start-line="184" selection-start-column="11" selection-end-line="184" selection-end-column="11" />
+        <state vertical-scroll-proportion="-0.6785714" vertical-offset="1197" max-vertical-offset="1767">
+          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/articles/6.html">
+    <entry file="file://$PROJECT_DIR$/articles/5.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5185185" vertical-offset="1197" max-vertical-offset="1767">
-          <caret line="77" column="6" selection-start-line="77" selection-start-column="6" selection-end-line="77" selection-end-column="6" />
+        <state vertical-scroll-proportion="-7.464286" vertical-offset="171" max-vertical-offset="1710">
+          <caret line="20" column="22" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/time/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2962963" vertical-offset="798" max-vertical-offset="4047">
+          <caret line="50" column="38" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="38" />
           <folding />
         </state>
       </provider>
