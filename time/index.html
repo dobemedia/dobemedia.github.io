@@ -80,11 +80,19 @@
 
                 var imgUrl="http://www.bigerthanbiger.com/mmclock/"+strNextTime+".jpg";
                 document.querySelector("#clock_"+img_index).src=imgUrl;
-                shareIcon=imgUrl;
+                if(h<10){
+                    h="0"+h;
+                }
+                if(m<10){
+                    m="0"+m;
+                }
+                if(s<10){
+                    s="0"+s;
+                }
+                shareIcon="http://www.bigerthanbiger.com/mmclock/"+h+""+m+""+".jpg";
+                //
                 randomAd();
             }
-
-
         }
         function init(){
             //get time
