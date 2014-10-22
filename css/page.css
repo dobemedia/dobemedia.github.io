@@ -124,7 +124,7 @@ table {
     word-wrap: break-word;
     padding-bottom: 10px;
 }
-#text img{
+#text img,#text video{
     width: 100%;
     margin: 10px 0px 0px 0px;
 }
