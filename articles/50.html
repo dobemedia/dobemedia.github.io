@@ -10,6 +10,9 @@
     <meta content="email=no" name="format-detection">
     <link href="../css/page.css" rel="stylesheet" type="text/css">
     <script>
+        function pageToTop(){
+            document.body.scrollTop=0;
+        }
         function randomAd(){
             var ads=new Array();
             ads.push(["新人送Q币","http://www.dobemedia.com/ads/1.png","http://re.paipai.com/tws/etgcl/click?fu=http%3A%2F%2Fte.paipai.com%2Fcps_fresher.shtml&pps=etg.12843628_105026_22_12843631"]);
@@ -50,6 +53,7 @@
     <a id="ad" href="" target="_blank">
         <img id="adImg" src="" width="100%" border="0">
     </a>
+    <img style="margin:0 auto;" width="162" height="41" src="http://www.dobemedia.com/res/back_to_top.png" onclick="pageToTop();" ontouchstart="pageToTop();">
 </div>
 <div style="display: none;"><img src="http://img.users.51.la/17389585.asp"/></div>
 <div id="footer">1999-2014 dobeMedia 逗比传媒</div>
