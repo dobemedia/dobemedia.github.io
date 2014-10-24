@@ -10,6 +10,41 @@
     <meta content="email=no" name="format-detection">
     <link href="../css/page.css" rel="stylesheet" type="text/css">
     <script>
+        wifi_for_menu_action=false;//全局控制菜单动作是否激活
+        wifi_for_menu_to="up";//全局判断菜单动作方向
+        function mobile_menu_button(){
+            wifi_for_menu_action=true;
+            if(parseInt(document.getElementById("mobile_menu").getAttribute("data-state"))==48){
+               document.getElementById("menu_img").src="http://golf.bjnews.com.cn/statics/images/mobile/close_2_menu.gif"; 
+                wifi_for_menu_to="up";
+            }else if(parseInt(document.getElementById("mobile_menu").getAttribute("data-state"))==0){
+                document.getElementById("menu_img").src="http://golf.bjnews.com.cn/statics/images/mobile/menu_2_close.gif";
+                wifi_for_menu_to="down";
+            }
+        }
+function menuAction(){
+    if(wifi_for_menu_action){
+        var h=parseInt(document.getElementById("mobile_menu").getAttribute("data-state"));
+        if(wifi_for_menu_to=="up"){
+            //菜单向上卷起
+            h-=2;
+            
+            document.getElementById("mobile_menu").style.height=h+"px";
+            if(h==0){
+                wifi_for_menu_action=false;
+            }
+        }else if(wifi_for_menu_to=="down"){
+            //菜单向下打开
+            h+=2;
+            document.getElementById("mobile_menu").style.height=h+"px";
+            if(h==48){
+                wifi_for_menu_action=false;
+            }
+        }
+        document.getElementById("mobile_menu").setAttribute("data-state",h);
+    }
+}
+setInterval(menuAction,1000/32);
         function pageToTop(){
             document.body.scrollTop=0;
         }
@@ -30,6 +65,47 @@
     </script>
 </head>
 <body>
+<div class="mobile" id="mobile_top_bar">
+        <div id="mobile_menu_button" onclick="mobile_menu_button();" ontouchstart="mobile_menu_button();">
+            <img id="menu_img" src="http://www.dobemedia.com/res/menu.png" width="100%">
+        </div>
+        <img style="display:none;" width="0" height="0" src="http://www.dobemedia.com/res/menu_2_close.gif">
+        <img style="display:none;" width="0" height="0" src="http://www.dobemedia.com/res/close_2_menu.gif">
+    </div>
+    <div class="mobile" data-state="0" id="mobile_menu">
+        <ul>
+            <li>
+                <a href="" target="_blank">1</a>
+            </li>
+            <li>
+                <a href="" target="_blank">1</a>
+            </li>
+            <li>
+                <a href="" target="_blank">1</a>
+            </li>
+            <li>
+                <a href="" target="_blank">1</a>
+            </li>
+            <li>
+                <a href="" target="_blank">1</a>
+            </li>
+            <li>
+                <a href="" target="_blank">1</a>
+            </li>
+            <li>
+                <a href="" target="_blank">1</a>
+            </li>
+            <li>
+                <a href="" target="_blank">1</a>
+            </li>
+            <li>
+                <a href="" target="_blank">1</a>
+            </li>
+            <li>
+                <a href="" target="_blank">1</a>
+            </li>
+        </ul>
+    </div>
 <h1 id="title">16份FBI解密的UFO绝密文件</h1>
 
 <p style="text-align: center"><span id="post-author">spider</span> <span id="post-date">2014-10-20</span></p>
