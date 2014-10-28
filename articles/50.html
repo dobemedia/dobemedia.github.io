@@ -60,6 +60,8 @@ setInterval(menuAction,1000/32);
             var tmp_index=Math.floor(Math.random(1)*ads.length);
             document.querySelector("#top_ad_banner_for_mobile").src=ads[tmp_index][1];
             document.querySelector("#ad").href=ads[tmp_index][2];
+            
+            document.getElementById("top_ad").style.display="block";
         }
         function init(){
             randomAd();
