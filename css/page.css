@@ -220,13 +220,13 @@ p{
         width: 100%;
         height:0px;
         background: rgba(38,105,180,0.8);
-        overflow:hidden;
+        overflow-x:auto;
+        overflow-y:hidden;
     }
 #mobile_menu ul{
         width: 350%;
         height: 48px;
-            overflow-x:auto;
-        overflow-y:hidden;
+            
     }
     #mobile_menu ul li{
         width: 80px;
