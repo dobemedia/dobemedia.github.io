@@ -15,7 +15,7 @@
         }
         wifi_for_menu_action=false;//全局控制菜单动作是否激活
         wifi_for_menu_to="up";//全局判断菜单动作方向
-        function mobile_menu_button(){
+        function mobile_menu_button(e){
             wifi_for_menu_action=true;
             if(parseInt(document.getElementById("mobile_menu").getAttribute("data-state"))==48){
                document.getElementById("menu_img").src="http://golf.bjnews.com.cn/statics/images/mobile/close_2_menu.gif"; 
@@ -24,6 +24,7 @@
                 document.getElementById("menu_img").src="http://golf.bjnews.com.cn/statics/images/mobile/menu_2_close.gif";
                 wifi_for_menu_to="down";
             }
+            e.preventDefault();
         }
 function menuAction(){
     if(wifi_for_menu_action){
@@ -73,12 +74,12 @@ setInterval(menuAction,1000/32);
     <div id="top_ad" class="mobile">
         <a id="ad" target="_blank"><img id="top_ad_banner_for_mobile" src="" width="100%"></a>
         <div id="top_ad_close_for_mobile_pan">
-            <img id="top_ad_close_for_mobile" onclick="topadclose();" src="../res/ad_close.png">
+            <img id="top_ad_close_for_mobile" width="16" onclick="topadclose();" src="../res/ad_close.png">
         </div>
     </div>
 <div class="mobile" id="mobile_top_bar">
         <div id="mobile_menu_button" onclick="mobile_menu_button();" ontouchstart="mobile_menu_button();">
-            <img id="menu_img" src="http://www.dobemedia.com/res/menu.png" width="100%">
+            <img id="menu_img" src="http://www.dobemedia.com/res/menu.png" width="50%">
         </div>
         <img style="display:none;" width="0" height="0" src="http://www.dobemedia.com/res/menu_2_close.gif">
         <img style="display:none;" width="0" height="0" src="http://www.dobemedia.com/res/close_2_menu.gif">
