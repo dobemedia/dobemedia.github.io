@@ -54,6 +54,31 @@ table {
     background: #ccc;
 
 }
+#top_ad{
+        /*顶部广告栏*/
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+    
+    #top_ad_banner_for_mobile{
+        /*顶部广告栏图片*/
+        border:none;
+    }
+    #top_ad_close_for_mobile_pan{
+        /*顶部广告栏 关闭按钮 面板*/
+        position: absolute;
+        height: 50%;
+        width: 50%;
+        top: 50%;
+        right: 0px;
+    }
+    #top_ad_close_for_mobile{
+        /*顶部广告栏 关闭按钮*/
+        position: absolute;
+        top:-16px;
+        right: 10px;
+    }
 #bar{
     font-family: Helvetica, Tahoma, Arial, Microsoft YaHei, sans-serif;
     position: fixed;
